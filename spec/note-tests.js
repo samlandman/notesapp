@@ -1,24 +1,10 @@
-// note-tests.js
-
 'use strict';
 
 (function(exports) {
     function testNoteTitleIsStored() {
-      var note = new Note("tesfdsfdsfdst note");
-      
-      expect.toEqual(note.title, "test note");
-      
+      var note = new Note("test note"); //This is creating the note
+      expect.toEqual(note.title, "test note"); //This is the expect line
     };
   
-    testNoteTitleIsStored();
-  })(this);
-
-
-
-// function testCircleRadiusDefaultsTo10() {
-//   var circle = new Circle();
-//   var assert = new assert();
-//   assert.isTrue(circle.radius === 10);
-// };
-
-// testCircleRadiusDefaultsTo10();
+    testNoteTitleIsStored(); //This is running the test
+  })(this); //This gives us back the responses
