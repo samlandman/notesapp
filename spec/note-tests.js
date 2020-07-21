@@ -15,8 +15,14 @@
         expect.toEqual("test note starts with an empty array of notes", noteApp.noteArray.length, 0);
       }
 
+      function addingANoteWithBlankTextReturnsAnError() {
+        expect.toEqual(noteApp.note(""),Error('Please insert your message'));
+      }
+
+
       testNoteArrayStartsEmpty();
       testNoteTitleIsStored(); //This is running the test
+      addingANoteWithBlankTextReturnsAnError();
   })(this); //This gives us back the responses
 
   // (function(exports) {
