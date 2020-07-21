@@ -1,8 +1,9 @@
 'use strict';
 
-(function(exports) {
-  let noteApp = new NoteApp();
+let noteApp = new NoteApp();
 
+(function(exports) {
+    
     function testNoteTitleIsStored() {
       // var noteApp = new NoteApp(); //This is creating the note
       noteApp.note("test note")
@@ -16,7 +17,7 @@
       }
 
       function addingANoteWithBlankTextReturnsAnError() {
-        expect.toEqual(noteApp.note(""),Error('Please insert your message'));
+        expect.toRaiseError('Adding a note with blank text returns an error', 'noteApp.note("")','Please insert your message');
       }
 
 
