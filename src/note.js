@@ -1,9 +1,26 @@
 'use strict';
 
-(function(exports) {
-    function Note(title) {
-      this.title = title;
-    };
+class Note {
+  constructor(title){
+    this.title = title;
+
+  }
+};
+
+class NoteApp {
+  constructor(){
+    this.noteArray = [];
+  }
+};
+
+
+// (function(exports) {
+//     function Note(title) {
+//       this.title = title;
+//     };
   
-    exports.Note = Note;
-  })(this);
+//     Note.prototype.noteArray = [];
+
+//     exports.Note = Note;
+//   })(this);
+
