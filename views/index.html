@@ -4,11 +4,19 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    
     <script src='../src/note.js'></script>
-   
+    <script>
+        window.addEventListener('DOMContentLoaded', (event) => {
+            const noteApp = new NoteApp();
+            console.log(noteApp)
+            console.log('DOM fully loaded and parsed');
+        });
+    </script>
+
 </head>
 <body>
-    THIS IS A TEST PAGE!!
+    This is a note page
 
     <form>
     <textarea rows="5" cols="50" name="Description" id="Albie's Playpen"></textarea> 
@@ -31,8 +39,7 @@
 
 
 
-<script>
-    // Loads up 
-</script>
+
 </body>
+
 </html>
