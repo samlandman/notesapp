@@ -6,7 +6,7 @@ class NoteApp {
     this.note20 = [];
   }
 
-  note (title) {
+  create (title) {
     if (title === "") {
       throw new Error('Please insert your message');
     }

@@ -3,25 +3,30 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    
+    <title>Notes for Albie</title>
+    <link rel="stylesheet" href="../styles/style.css">
     <script src='../src/note.js'></script>
     <script>
+      let noteApp;
         window.addEventListener('DOMContentLoaded', (event) => {
-            const noteApp = new NoteApp();
-            console.log(noteApp)
-            console.log('DOM fully loaded and parsed');
+            noteApp = new NoteApp();
         });
     </script>
 
 </head>
 <body>
-    This is a note page
 
-    <form>
-    <textarea rows="5" cols="50" name="Description" id="Albie's Playpen"></textarea> 
-    <br>
-    <button id='AlbieButton' type='submit'>Submit</button>
+  <div id="albieTheRapper">
+    <div id="margin"><h2 id="title">Write your notes for Albie here:</h2></div>
+
+    <form id="paper">
+
+      <textarea placeholder="notey note" id="text" name="text" rows="4"
+        style="overflow: hidden; word-wrap: break-word; resize: none; height: 160px; "></textarea>
+      <br>
+      <input id="albieButton" value="Create">
+
+    <!-- <button id='AlbieButton' type='submit'>Submit</button> -->
     </form>
 
 <!-- 20 Character Area -->
@@ -39,7 +44,19 @@
 
 
 
+</div>
+<script>
 
+  var btn = document.getElementById("albieButton");
+    btn.addEventListener("click", createNote);
+    function createNote() {
+      noteApp.create(document.getElementById("text").textContent);
+      console.log()
+      console.log(noteApp);
+      console.log("the array of dreams: " + noteApp.noteArray);
+    }
+
+</script>
 </body>
 
 </html>
