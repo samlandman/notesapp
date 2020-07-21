@@ -3,6 +3,7 @@
 class NoteApp {
   constructor(){
     this.noteArray = [];
+    this.note20 = [];
   }
 
   note (title) {
@@ -11,6 +12,7 @@ class NoteApp {
     }
     this.title = title;
     this.noteArray.push(title)
+    this.note20.push(title.substring(0,20))
   };
 
 };
