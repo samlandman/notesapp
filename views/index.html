@@ -48,14 +48,17 @@
 <script>
 
   var btn = document.getElementById("albieButton");
-    btn.addEventListener("click", createNote);
-    function createNote() {
-      noteApp.create(document.getElementById("albieText").value);
-      console.log()
-      console.log(noteApp);
-      console.log("the array of dreams: " + noteApp.noteArray);
-    }
+  btn.addEventListener("click", createNote);
 
+  function createNote() {
+    noteApp.create(document.getElementById("albieText").value);
+    populateList();
+  };
+
+  function populateList() {
+    noteApp.note20.forEach(note => console.log("note " + noteApp.note20.indexOf(note) + " : " + note ));
+  };
+    
 </script>
 </body>
 
