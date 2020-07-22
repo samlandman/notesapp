@@ -6,7 +6,7 @@
 	font-family:Courier, monospace;
 }
 body {
-	background:#333 url(https://static.tumblr.com/maopbtg/a5emgtoju/inflicted.png) repeat;        
+	background:#333 url(https://static.tumblr.com/maopbtg/a5emgtoju/inflicted.png) repeat;
 }
 #paper {
 	color:#FFF;
@@ -19,7 +19,7 @@ body {
 	-moz-user-select: none;
 	-ms-user-select: none;
 	-o-user-select: none;
-	user-select: none; 
+	user-select: none;
 }
 #albieText {
 	width:500px;
@@ -90,4 +90,8 @@ body {
 	margin-right:auto;
 	margin-top:24px;
 	margin-bottom:100px;
+}
+
+.albie20List {
+  color: white;
 }
