@@ -21,7 +21,7 @@ body {
 	-o-user-select: none;
 	user-select: none; 
 }
-#text {
+#albieText {
 	width:500px;
 	overflow:hidden;
 	background-color:#FFF;

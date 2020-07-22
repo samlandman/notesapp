@@ -21,7 +21,7 @@
 
     <form id="paper">
 
-      <textarea placeholder="notey note" id="text" name="text" rows="4"
+      <textarea placeholder="notey note" id="albieText" name="text" rows="4"
         style="overflow: hidden; word-wrap: break-word; resize: none; height: 160px; "></textarea>
       <br>
       <input id="albieButton" value="Create">
@@ -50,7 +50,7 @@
   var btn = document.getElementById("albieButton");
     btn.addEventListener("click", createNote);
     function createNote() {
-      noteApp.create(document.getElementById("text").textContent);
+      noteApp.create(document.getElementById("albieText").value);
       console.log()
       console.log(noteApp);
       console.log("the array of dreams: " + noteApp.noteArray);
