@@ -34,6 +34,10 @@
 <!-- For each, assign a link, that moves us down the area  -->
 
 
+<ul id="albieList"></ul>
+
+
+
 <!-- Individual Full Note Text -->
 <!-- Individual Full Note Text -->
 <!-- Individual Full Note Text -->
@@ -52,13 +56,22 @@
 
   function createNote() {
     noteApp.create(document.getElementById("albieText").value);
-    populateList();
+
+    var albieList = document.getElementById("albieList");
+    var li = document.createElement("li");
+    li.setAttribute('id',(noteApp.note20.length -1));
+    li.appendChild(document.createTextNode(noteApp.note20[noteApp.note20.length -1]));
+    albieList.appendChild(li);
+
+  
+
+    // populateList();
   };
 
-  function populateList() {
-    noteApp.note20.forEach(note => console.log("note " + noteApp.note20.indexOf(note) + " : " + note ));
-  };
-    
+  // function populateList() {
+    // noteApp.note20.forEach(note => console.log("note " + noteApp.note20.indexOf(note) + " : " + note ));
+  // };
+
 </script>
 </body>
 
