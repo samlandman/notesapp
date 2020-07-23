@@ -5,8 +5,21 @@ window.addEventListener('DOMContentLoaded', (event) => {
 });
 
 function theRandomisor(){
-    var colourArray = ["#fa26a0", "#05dfd7", "#a3f7bf", "#fff591"];
-    document.body.style.backgroundColor = colourArray[Math.floor(Math.random() * colourArray.length)];
+  var colourArray = ["#fa26a0", "#05dfd7", "#a3f7bf", "#fff591", "#F6DEF6"];
+  var brightColourArray = ["#05D95F", "#FA2028", "#5C0840", "#000A6E", "#092109"];
+  var col = Math.floor(Math.random() * colourArray.length)
+  let albieButton = document.getElementById("albieButton");
+    document.body.style.backgroundColor = colourArray[col];
+    albieButton.style.color = brightColourArray[col];
+    albieButton.addEventListener("mouseover", function(event) {
+      event.target.style.background = brightColourArray[col];
+      event.target.style.color = colourArray[col];
+      // event.target.style.boxShadow = '0 0 10px, ${brightColourArray[col]}';
+    })
+    albieButton.addEventListener("mouseleave", function(event) {
+      event.target.style.background = colourArray[col];
+      event.target.style.color = brightColourArray[col];
+    })
 }
   
   
