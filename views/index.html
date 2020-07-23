@@ -24,7 +24,7 @@
       <textarea placeholder="notey note" id="albieText" name="text" rows="4"
         style="overflow: hidden; word-wrap: break-word; resize: none; height: 160px; "></textarea>
       <br>
-      <input id="albieButton" value="Create">
+      <input type="button" id="albieButton" value="Create">
 
     <!-- <button id='AlbieButton' type='submit'>Submit</button> -->
     </form>
@@ -36,11 +36,8 @@
 
 <a id="albieList"></a>
 
-<a href="#opening">Take me to the opening paragraph.</a>
-<!-- make these hyperlinks  -->
 
 
-<p id="opening">Hyperlinks are utilized by a web browser to move from one page to another...</p>
 <!-- create individual notes at the bottom of the page, and populate them.
 On click function, create a p paragraph, which has unique id which is array position. -->
 
@@ -62,12 +59,14 @@ On click function, create a p paragraph, which has unique id which is array posi
   function createNote() {
     noteApp.create(document.getElementById("albieText").value);
 
+    document.getElementById("albieText").value = "";
+
     var albieList = document.getElementById("albieList");
     var li = document.createElement("a");
-    var br = document.createElement("br")
+    var br = document.createElement("br");
     li.setAttribute('id',(noteApp.note20.length -1));
-    li.setAttribute('class', 'albie20List')
-    li.setAttribute('href',('#note'+(noteApp.note20.length -1)))
+    li.setAttribute('class', 'albie20List');
+    li.setAttribute('href',('#note'+(noteApp.note20.length -1)));
     li.appendChild(document.createTextNode(noteApp.note20[noteApp.note20.length -1]));
     albieList.appendChild(li);
     albieList.appendChild(br);
@@ -76,7 +75,7 @@ On click function, create a p paragraph, which has unique id which is array posi
     var list = document.createElement("li");
     list.setAttribute('class', 'albieFullList');
     list.setAttribute('id', ("note"+(noteApp.note20.length -1)));
-    list.appendChild(document.createTextNode(noteApp.noteArray[noteApp.noteArray.length -1]))
+    list.appendChild(document.createTextNode(noteApp.noteArray[noteApp.noteArray.length -1]));
     albieFullList.appendChild(list);
     // populateList();
   };
