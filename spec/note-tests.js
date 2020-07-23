@@ -1,9 +1,8 @@
 'use strict';
 
-let noteApp = new NoteApp();
 
 (function(exports) {
-    
+  let noteApp = new NoteApp();
     function testNoteTitleIsStored() {
       noteApp.create("test note")
       expect.toEqual("test note title is stored", noteApp.noteArray.includes("test note"), true); //This is the expect line
@@ -14,7 +13,11 @@ let noteApp = new NoteApp();
       }
 
       function addingANoteWithBlankTextReturnsAnError() {
-        expect.toRaiseError('Adding a note with blank text returns an error', 'noteApp.note("")','Please insert your message');
+        expect.toRaiseError(
+          'Adding a note with blank text returns an error',
+          function(){noteApp.create("")},
+          'Please insert your message'
+        );
       }
 
       function Read20ReturnsFirst20Characters(){

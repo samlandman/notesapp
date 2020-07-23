@@ -20,9 +20,12 @@ function theRandomisor(){
       event.target.style.background = colourArray[col];
       event.target.style.color = brightColourArray[col];
     })
+
+    document.getElementById("albieTitle").style.color = brightColourArray[col];
+
 }
-  
-  
+
+
   var btn = document.getElementById("albieButton");
   btn.addEventListener("click", createNote);
 
@@ -43,7 +46,7 @@ function theRandomisor(){
     li.setAttribute('href',('#note'+(noteApp.note20.length -1)));
     li.appendChild(document.createTextNode(noteApp.note20[noteApp.note20.length -1]));
     albieList.appendChild(li);
-    albieList.appendChild(br);  
+    albieList.appendChild(br);
   };
 
   function createFullList() {

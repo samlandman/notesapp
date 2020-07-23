@@ -1,21 +1,21 @@
 'use strict';
 
 var expect = {
-  toEqual: function(string, assertionToCheck,result) {
-    if (assertionToCheck !== result) {
-      throw new Error(string + " failed: " + assertionToCheck + " does not match " + result + ".");
+  toEqual: function(testDescription, actualResult, expectedResult) {
+    if (actualResult !== expectedResult) {
+      throw new Error(testDescription + " failed: " + actualResult + " does not match " + expectedResult + ".");
     } else {
-      console.log(string);
+      console.log(testDescription);
     }
   },
 
-  toRaiseError: function(string, assertionToCheck, result){
+  toRaiseError: function(testDescription, callback, expectedError){
     try{
-      eval(assertionToCheck);
-      throw new Error("No error recieved");
+      callback();
+      throw new Error("No error received");
     } catch (error){
-      this.toEqual(string, error.message, result)
+      this.toEqual(testDescription, error.message, expectedError)
     }
-    
+
   }
 };
