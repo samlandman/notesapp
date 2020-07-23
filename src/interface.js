@@ -22,7 +22,7 @@ function theRandomisor(){
     })
 
     document.getElementById("albieTitle").style.color = brightColourArray[col];
-
+    // document.getElementById("c").style.backgroundColor = colourArray[col];
 }
 
 

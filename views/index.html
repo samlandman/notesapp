@@ -7,22 +7,24 @@
     <link rel="stylesheet" href="../styles/style.css">
     <script src='../src/note.js'></script>
   </head>
-  <body>
-    <div id="albieTheRapper">
-      <div id="margin"><h2 id="albieTitle">Write your notes for Albie here:</h2></div>
-      <form id="paper">
-        <textarea placeholder="NOTEY NOTE" id="albieText" name="text" rows="4"
-          style="overflow: hidden; word-wrap: break-word; resize: none; height: 160px; "></textarea>
-        <br>
-        <div class="albieButtonDiv">
-        <a href="#" id="albieButton" value="Create">
-          Create
-        </a>
-        </div>
-      </form>
-      <a id="albieList"></a>
-      <ul id="albieFullList"></ul>
-    </div>
-    <script src='../src/interface.js'></script>
-  </body>
+    <body>
+      <div id="albieTheRapper">
+        <div id="margin"><h2 id="albieTitle">Write your notes for Albie here:</h2></div>
+        <form id="paper">
+          <textarea placeholder="NOTEY NOTE" id="albieText" name="text" rows="4"
+            style="overflow: hidden; word-wrap: break-word; resize: none; height: 160px; "></textarea>
+          <br>
+          <div class="albieButtonDiv">
+          <a href="#" id="albieButton" value="Create">
+            Create
+          </a>
+          </div>
+        </form>
+        <a id="albieList"></a>
+        <ul id="albieFullList"></ul>
+      </div>
+      <canvas id="c"></canvas>
+      <script src="../src/particles.js"></script>
+      <script src='../src/interface.js'></script>
+    </body>
 </html>

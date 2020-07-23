@@ -3,11 +3,10 @@
 	border:none;
 	margin:0px;
 	padding:0px;
-	font-family:Courier, monospace;
+  font-family:Courier, monospace;
+  background-color: transparent;
 }
 body {
-	/* background:#333 url(https://static.tumblr.com/maopbtg/a5emgtoju/inflicted.png) repeat; */
-	/* background-color: hotpink; */
 }
 #paper {
 	color:#FFF;
@@ -45,7 +44,8 @@ body {
 	-webkit-box-shadow: 0px 2px 14px #000;
 	box-shadow: 0px 2px 14px #000;
 	border-top:1px solid #FFF;
-	border-bottom:1px solid #FFF;
+  border-bottom:1px solid #FFF;
+  z-index: 2;
 }
 #albieTitle {
   position: relative;
@@ -75,6 +75,7 @@ body {
   font-size: 24px;
   overflow: hidden;
   transition: 0.2s;
+  z-index: 2;
 }
 
 .albieButtonDiv {
@@ -84,43 +85,9 @@ body {
 /* for the button hover glow */
 #albieButton:hover
 {
-  /* color: #255784; */
-  /* background: #2196f3; */
   box-shadow: 0 0 10px #FFF, 0 0 40px #FFF, 0 0 80px #FFF;
 }
 
-
-/* #albieButton {
-	cursor:pointer;
-	margin-top:20px;
-	float:right;
-	height:40px;
-	padding-left:24px;
-	padding-right:24px;
-	font-family:Arial, Helvetica, sans-serif;
-	font-weight:bold;
-	font-size:20px;
-	color:#FFF;
-	text-shadow: 0px -1px 0px #000000;
-	-webkit-border-radius:8px;
-	border-radius:8px;
-	border-top:1px solid #FFF;
-	-webkit-box-shadow: 0px 2px 14px #000;
-	box-shadow: 0px 2px 14px #000;
-	background-color: #62add6;
-	background-image:url(https://static.tumblr.com/maopbtg/ZHLmgtok7/button.png);
-	background-repeat:repeat-x;
-}
-#albieButton:active {
-	zoom: 1;
-	filter: alpha(opacity=80);
-	opacity: 0.8;
-}
-#albieButton:focus {
-	zoom: 1;
-	filter: alpha(opacity=80);
-	opacity: 0.8;
-} */
 #albieTheRapper {
 	width:700px;
 	height:auto;
@@ -138,10 +105,20 @@ body {
   color: white;
   position: relative;
   top: 80px;
+  z-index: 2;
 }
 
 .albieFullList {
 	color: white;
 	position: relative;
 	top: 300px;
+}
+
+#c {
+	position:absolute;
+	top: 0;
+	width: 100%;
+	height: 100%;
+  background-color: transparent;
+  z-index: 1;
 }
