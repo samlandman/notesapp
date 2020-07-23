@@ -1,90 +1,24 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
+  <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Notes for Albie</title>
     <link rel="stylesheet" href="../styles/style.css">
     <script src='../src/note.js'></script>
-    <script>
-      let noteApp;
-        window.addEventListener('DOMContentLoaded', (event) => {
-            noteApp = new NoteApp();
-        });
-    </script>
-
-</head>
-<body>
-
-  <div id="albieTheRapper">
-    <div id="margin"><h2 id="title">Write your notes for Albie here:</h2></div>
-
-    <form id="paper">
-
-      <textarea placeholder="notey note" id="albieText" name="text" rows="4"
-        style="overflow: hidden; word-wrap: break-word; resize: none; height: 160px; "></textarea>
-      <br>
-      <input type="button" id="albieButton" value="Create">
-
-    <!-- <button id='AlbieButton' type='submit'>Submit</button> -->
-    </form>
-
-<!-- 20 Character Area -->
-<!-- Displaying all of the results from Note20 -->
-<!-- For each, assign a link, that moves us down the area  -->
-
-
-<a id="albieList"></a>
-
-
-
-<!-- create individual notes at the bottom of the page, and populate them.
-On click function, create a p paragraph, which has unique id which is array position. -->
-
-<!-- Individual Full Note Text -->
-<!-- Individual Full Note Text -->
-<!-- Individual Full Note Text -->
-<!-- Individual Full Note Text -->
-<!-- Individual Full Note Text -->
-<!-- Individual Full Note Text -->
-<!-- Individual Full Note Text -->
-<ul id="albieFullList"></ul>
-
-</div>
-<script>
-
-  var btn = document.getElementById("albieButton");
-  btn.addEventListener("click", createNote);
-
-  function createNote() {
-    noteApp.create(document.getElementById("albieText").value);
-
-    document.getElementById("albieText").value = "";
-
-    var albieList = document.getElementById("albieList");
-    var li = document.createElement("a");
-    var br = document.createElement("br");
-    li.setAttribute('id',(noteApp.note20.length -1));
-    li.setAttribute('class', 'albie20List');
-    li.setAttribute('href',('#note'+(noteApp.note20.length -1)));
-    li.appendChild(document.createTextNode(noteApp.note20[noteApp.note20.length -1]));
-    albieList.appendChild(li);
-    albieList.appendChild(br);
-
-    var albieFullList = document.getElementById("albieFullList");
-    var list = document.createElement("li");
-    list.setAttribute('class', 'albieFullList');
-    list.setAttribute('id', ("note"+(noteApp.note20.length -1)));
-    list.appendChild(document.createTextNode(noteApp.noteArray[noteApp.noteArray.length -1]));
-    albieFullList.appendChild(list);
-    // populateList();
-  };
-
-  // function populateList() {
-    // noteApp.note20.forEach(note => console.log("note " + noteApp.note20.indexOf(note) + " : " + note ));
-  // };
-
-</script>
-</body>
-
+  </head> 
+  <body>
+    <div id="albieTheRapper">
+      <div id="margin"><h2 id="title">Write your notes for Albie here:</h2></div>
+      <form id="paper">
+        <textarea placeholder="notey note" id="albieText" name="text" rows="4"
+          style="overflow: hidden; word-wrap: break-word; resize: none; height: 160px; "></textarea>
+        <br>
+        <input type="button" id="albieButton" value="Create">
+      </form>
+      <a id="albieList"></a>
+      <ul id="albieFullList"></ul>
+    </div>
+    <script src='../src/interface.js'></script>
+  </body>
 </html>
