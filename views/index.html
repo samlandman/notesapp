@@ -34,13 +34,13 @@
 <!-- For each, assign a link, that moves us down the area  -->
 
 
-<ul id="albieList"></ul>
+<a id="albieList"></a>
 
-<a href="#opening">Take me to the opening paragraph.</a> 
+<a href="#opening">Take me to the opening paragraph.</a>
 <!-- make these hyperlinks  -->
 
 
-<p id="opening">Hyperlinks are utilized by a web browser to move from one page to another...</p> 
+<p id="opening">Hyperlinks are utilized by a web browser to move from one page to another...</p>
 <!-- create individual notes at the bottom of the page, and populate them.
 On click function, create a p paragraph, which has unique id which is array position. -->
 
@@ -51,10 +51,7 @@ On click function, create a p paragraph, which has unique id which is array posi
 <!-- Individual Full Note Text -->
 <!-- Individual Full Note Text -->
 <!-- Individual Full Note Text -->
-
-<section id="fullnote">
-
-</section>
+<ul id="albieFullList"></ul>
 
 </div>
 <script>
@@ -66,14 +63,21 @@ On click function, create a p paragraph, which has unique id which is array posi
     noteApp.create(document.getElementById("albieText").value);
 
     var albieList = document.getElementById("albieList");
-    var li = document.createElement("li");
+    var li = document.createElement("a");
+    var br = document.createElement("br")
     li.setAttribute('id',(noteApp.note20.length -1));
     li.setAttribute('class', 'albie20List')
+    li.setAttribute('href',('#note'+(noteApp.note20.length -1)))
     li.appendChild(document.createTextNode(noteApp.note20[noteApp.note20.length -1]));
     albieList.appendChild(li);
+    albieList.appendChild(br);
 
-
-
+    var albieFullList = document.getElementById("albieFullList");
+    var list = document.createElement("li");
+    list.setAttribute('class', 'albieFullList');
+    list.setAttribute('id', ("note"+(noteApp.note20.length -1)));
+    list.appendChild(document.createTextNode(noteApp.noteArray[noteApp.noteArray.length -1]))
+    albieFullList.appendChild(list);
     // populateList();
   };
 
