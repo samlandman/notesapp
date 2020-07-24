@@ -29,6 +29,13 @@ function theRandomisor(){
   var btn = document.getElementById("albieButton");
   btn.addEventListener("click", createNote);
 
+  window.addEventListener("hashchange", toggleAlbieNote);
+
+  function toggleAlbieNote() {
+  document.getElementById("toggleAlbieNote").style.visibility = "visible";
+  document.getElementById("fullAlbieNote").value = noteApp.noteArray[0];
+  }
+
   function createNote() {
     noteApp.create(document.getElementById("albieText").value);
     document.getElementById("albieText").value = "";
