@@ -1,10 +1,10 @@
 let noteApp;
 window.addEventListener('DOMContentLoaded', (event) => {
     noteApp = new NoteApp();
-    theRandomisor();
+    theRandomizor();
 });
 
-function theRandomisor(){
+function theRandomizor(){
   var colourArray = ["#fa26a0", "#05dfd7", "#a3f7bf", "#fff591", "#F6DEF6"];
   var brightColourArray = ["#05D95F", "#FA2028", "#5C0840", "#000A6E", "#092109"];
   var col = Math.floor(Math.random() * colourArray.length)
@@ -33,15 +33,16 @@ function theRandomisor(){
 
   function toggleAlbieNote() {
   document.getElementById("toggleAlbieNote").style.visibility = "visible";
-  document.getElementById("fullAlbieNote").value = noteApp.noteArray[0];
+  document.getElementById("fullAlbieNote").innerHTML = noteApp.noteArray[location.hash.substr(1)];
+  console.log(location.hash.substr(1))
   }
 
   function createNote() {
     noteApp.create(document.getElementById("albieText").value);
     document.getElementById("albieText").value = "";
     create20list();
-    createFullList();
-    theRandomisor();
+    // createFullList();
+    theRandomizor();
   };
 
   function create20list() {
@@ -50,17 +51,17 @@ function theRandomisor(){
     var br = document.createElement("br");
     li.setAttribute('id',(noteApp.note20.length -1));
     li.setAttribute('class', 'albie20List');
-    li.setAttribute('href',('#note'+(noteApp.note20.length -1)));
+    li.setAttribute('href',('#'+(noteApp.note20.length -1)));
     li.appendChild(document.createTextNode(noteApp.note20[noteApp.note20.length -1]));
     albieList.appendChild(li);
     albieList.appendChild(br);
   };
 
-  function createFullList() {
-    var albieFullList = document.getElementById("albieFullList");
-    var list = document.createElement("p");
-    list.setAttribute('class', 'albieFullList');
-    list.setAttribute('id', ("note"+(noteApp.note20.length -1)));
-    list.appendChild(document.createTextNode(noteApp.noteArray[noteApp.noteArray.length -1]));
-    albieFullList.appendChild(list);
-  };
+  // function createFullList() {
+  //   var albieFullList = document.getElementById("albieFullList");
+  //   var list = document.createElement("p");
+  //   list.setAttribute('class', 'albieFullList');
+  //   list.setAttribute('id', ("note"+(noteApp.note20.length -1)));
+  //   list.appendChild(document.createTextNode(noteApp.noteArray[noteApp.noteArray.length -1]));
+  //   albieFullList.appendChild(list);
+  // };
