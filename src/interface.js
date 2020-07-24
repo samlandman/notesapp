@@ -4,6 +4,8 @@ window.addEventListener('DOMContentLoaded', (event) => {
     theRandomizor();
 });
 
+
+
 function theRandomizor(){
   var colourArray = ["#fa26a0", "#05dfd7", "#a3f7bf", "#fff591", "#F6DEF6"];
   var brightColourArray = ["#05D95F", "#FA2028", "#5C0840", "#000A6E", "#092109"];
@@ -22,6 +24,9 @@ function theRandomizor(){
     })
 
     document.getElementById("albieTitle").style.color = brightColourArray[col];
+    document.getElementById("albieOtherTitle").style.color = brightColourArray[col];
+    document.getElementById("albieOtherOtherTitle").style.color = brightColourArray[col];
+    document.getElementsByTagName("a").style.color = brightColourArray[col];
     // document.getElementById("c").style.backgroundColor = colourArray[col];
 }
 

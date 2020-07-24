@@ -58,6 +58,28 @@ body {
 	height:28px;
 	font-weight:normal;
 }
+#albieOtherTitle {
+  position: relative;
+  top: 50px;
+	background-color:transparent;
+  text-align: center;
+	color:#FFF;
+	font-size:2rem;
+	font-family:Courier, monospace;
+	height:28px;
+	font-weight:normal;
+}
+#albieOtherOtherTitle {
+  position: relative;
+  top: 50px;
+	background-color:transparent;
+  text-align: center;
+	color:#FFF;
+	font-size:2rem;
+	font-family:Courier, monospace;
+	height:28px;
+	font-weight:normal;
+}
 /* for the glowing button */
 #albieButton
 {
@@ -102,7 +124,7 @@ body {
 }
 
 .albie20List {
-  color: white;
+  /* color: white; */
   position: relative;
   top: 80px;
   z-index: 2;
@@ -153,5 +175,3 @@ body {
   border-bottom:1px solid #FFF;
   z-index: 2;
 }
-
-#toggleAlbieNoteVisible
